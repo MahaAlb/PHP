@@ -1,0 +1,41 @@
+<html>
+    <body>
+    <table>
+    <tr>
+      <th>ID</th>
+      <th>Product Name</th>
+      <th>Price</th>
+      <th>Action</th>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>Product 1</td>
+      <td>$10</td>
+      <td>
+        <button>Add</button>
+        <button>Edit</button>
+        <button>Delete</button>
+      </td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>Product 2</td>
+      <td>$20</td>
+      <td>
+        <button>Add</button>
+        <button>Edit</button>
+        <button>Delete</button>
+      </td>
+    </tr>
+  </table>
+  <script>
+    document.querySelectorAll('button').forEach(button => {
+      if (button.textContent === 'Add') {
+        button.addEventListener('click', event => {
+          window.location.href = 'add-product.php';
+        });
+      }
+    });
+  </script>
+</body>
+</html>
